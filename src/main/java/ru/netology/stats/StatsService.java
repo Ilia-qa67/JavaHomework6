@@ -6,11 +6,11 @@ public class StatsService {
 
         for (int i = 0; i < sales.length; i++) {
             sumSales = sumSales + sales[i];
-            }
-        return sumSales;
         }
+        return sumSales;
+    }
 
-    public int averageSales(int[] sales)  {
+    public int averageSales(int[] sales) {
         int averageSales = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -24,7 +24,7 @@ public class StatsService {
         int monthHighestPeak = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if(sales[i] >= sales[monthHighestPeak])
+            if (sales[i] >= sales[monthHighestPeak])
                 monthHighestPeak = i;
         }
         return monthHighestPeak + 1;
@@ -34,7 +34,7 @@ public class StatsService {
         int monthLowestPeak = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if(sales[i] <= sales[monthLowestPeak])
+            if (sales[i] <= sales[monthLowestPeak])
                 monthLowestPeak = i;
         }
         return monthLowestPeak + 1;
