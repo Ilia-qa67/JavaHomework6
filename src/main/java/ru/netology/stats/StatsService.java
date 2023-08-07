@@ -39,10 +39,9 @@ public class StatsService {
 
     public int salesLessAverage(int[] sales) {
         int salesLessAverage = 0;
-        int averageSales = sumSales(sales) / sales.length;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < averageSales) {
+            if (sales[i] < averageSales(sales)) {
                 salesLessAverage++;
             }
         }
@@ -51,10 +50,9 @@ public class StatsService {
 
     public int salesAboveAverage(int[] sales) {
         int salesAboveAverage = 0;
-        int averageSales = sumSales(sales) / sales.length;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > averageSales) {
+            if (sales[i] > averageSales(sales)) {
                 salesAboveAverage++;
             }
         }
